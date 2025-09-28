@@ -1,1 +1,4 @@
 # practice
+
+# License
+MIT License

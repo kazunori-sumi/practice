@@ -1,8 +1,13 @@
 {
-  "name": "cp-cpp",
+  "name": "C++",
   "build": {
     "dockerfile": "Dockerfile"
   },
+  "runArgs": [
+		"--cap-add=SYS_PTRACE",
+		"--security-opt",
+		"seccomp=unconfined"
+	],
   "features": {},
   "settings": {
     "terminal.integrated.defaultProfile.linux": "bash",
@@ -14,6 +19,11 @@
   "extensions": [
     "ms-vscode.cpptools",
     "ms-vscode.cmake-tools",
+    "ms-vscode.cpptools-themes",
+    "ms-vscode.cpptools-extension-pack",
+    "ms-python.debugpy",
+    "ms-python.vscode-pylance",
+    "visualstudioexptteam.vscodeintellicode",
     "vadimcn.vscode-lldb",        // デバッグ
     "formulahendry.code-runner",  // 1クリック実行が楽
     "yoavbls.pretty-ts-errors",   // お好み
