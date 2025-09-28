@@ -1,0 +1,24 @@
+{
+  "name": "cp-cpp",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {},
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "editor.formatOnSave": true,
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    "C_Cpp.default.cppStandard": "c++20",
+    "files.insertFinalNewline": true
+  },
+  "extensions": [
+    "ms-vscode.cpptools",
+    "ms-vscode.cmake-tools",
+    "vadimcn.vscode-lldb",        // デバッグ
+    "formulahendry.code-runner",  // 1クリック実行が楽
+    "yoavbls.pretty-ts-errors",   // お好み
+    "ms-python.python"            // oj 等のPython系ツール用
+  ],
+  "postCreateCommand": "bash .devcontainer/postCreate.sh",
+  "remoteUser": "vscode"
+}

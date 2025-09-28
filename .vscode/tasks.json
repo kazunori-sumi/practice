@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build (GNU++20 O2)",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-std=gnu++20",
+        "-O2",
+        "-Wall","-Wextra","-Wshadow","-Wconversion",
+        "-DLOCAL_DEBUG",
+        "${file}",
+        "-o",
+        "${fileDirname}/a.out"
+      ],
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "Run (stdin from input.txt)",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "cd '${fileDirname}' && ./a.out < input.txt"
+      ],
+      "dependsOn": "Build (GNU++20 O2)"
+    }
+  ]
+}
