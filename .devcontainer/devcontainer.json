@@ -4,10 +4,10 @@
     "dockerfile": "Dockerfile"
   },
   "runArgs": [
-		"--cap-add=SYS_PTRACE",
-		"--security-opt",
-		"seccomp=unconfined"
-	],
+    "--cap-add=SYS_PTRACE",
+    "--security-opt",
+    "seccomp=unconfined"
+  ],
   "features": {},
   "settings": {
     "terminal.integrated.defaultProfile.linux": "bash",
@@ -24,11 +24,11 @@
     "ms-python.debugpy",
     "ms-python.vscode-pylance",
     "visualstudioexptteam.vscodeintellicode",
-    "vadimcn.vscode-lldb",        // デバッグ
-    "formulahendry.code-runner",  // 1クリック実行が楽
-    "yoavbls.pretty-ts-errors",   // お好み
-    "ms-python.python"            // oj 等のPython系ツール用
+    "vadimcn.vscode-lldb", // デバッグ
+    "formulahendry.code-runner", // 1クリック実行が楽
+    "yoavbls.pretty-ts-errors", // お好み
+    "ms-python.python" // oj 等のPython系ツール用
   ],
-  "postCreateCommand": "bash .devcontainer/postCreate.sh",
+  // "postCreateCommand": "bash .devcontainer/postCreate.sh",
   "remoteUser": "vscode"
 }
